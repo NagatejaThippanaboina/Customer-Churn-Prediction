@@ -242,24 +242,25 @@ if st.button("Predict Churn"):
 
     for r in reasons[:3]:
         st.write("•", r)
+    
     # Quick Insight
     st.subheader("Quick Insight")
 
-if probability >= 0.60:
-    st.write("🔴 High churn risk detected. Immediate retention strategies are recommended.")
+    if probability >= 0.45:
+        st.write("🔴 High churn risk detected. Immediate retention strategies are recommended.")
 
-elif probability >= 0.30:
-    st.write("🟡 Moderate churn risk detected. Customer engagement may help reduce churn.")
+    elif probability >= 0.30:
+        st.write("🟡 Moderate churn risk detected. Customer engagement may help reduce churn.")
 
-else:
-    st.write("🟢 Customer appears stable with low churn risk.")
-    # Model Info
-    st.subheader("Model Info")
-    st.write("Model used: Logistic Regression (Best Accuracy: 80.31%)")
+    else:
+        st.write("🟢 Customer appears stable with low churn risk.")
+        # Model Info
+        st.subheader("Model Info")
+        st.write("Model used: Logistic Regression (Best Accuracy: 80.31%)")
 
-    st.subheader("Project Summary")
-    st.write("""
-    This model predicts customer churn using telecom data.
-    It helps businesses identify at-risk customers early and improve retention strategies.
-    Model: Logistic Regression
-    """)
+        st.subheader("Project Summary")
+        st.write("""
+        This model predicts customer churn using telecom data.
+        It helps businesses identify at-risk customers early and improve retention strategies.
+        Model: Logistic Regression
+        """)
