@@ -118,7 +118,7 @@ payment_method = st.selectbox(
 
 if st.button("Predict Churn"):
 
-    data = {col: 0 for col in columns}
+    data = {col: 0 for col in features}
 
     data["SeniorCitizen"] = senior_citizen
     data["tenure"] = tenure
