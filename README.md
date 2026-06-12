@@ -50,16 +50,16 @@ Python, Pandas, NumPy, Scikit-learn, Streamlit, Matplotlib, SHAP
 Place screenshots inside `reports/` folder:
 
 - Input UI  
-  ![Input UI](reports/app_input.png.png)
+  ![Input UI](reports/app_input.png)
 
 - Prediction Result  
-  ![Result UI](reports/app_result.png.png)
+  ![Result UI](reports/app_result.png)
 
 - Churn Distribution  
-  ![Churn Distribution](reports/churn_distribution.png.png)
+  ![Churn Distribution](reports/churn_distribution.png)
 
 - Contract vs Churn  
-  ![Contract vs Churn](reports/contract_vs_churn.png.png)
+  ![Contract vs Churn](reports/contract_vs_churn.png)
 
 ## 🧪 How to Run
 
