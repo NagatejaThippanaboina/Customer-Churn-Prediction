@@ -1,11 +1,13 @@
-
+import os
 import streamlit as st
 import pandas as pd
 import joblib
 from PIL import Image
 Image.MAX_IMAGE_PIXELS = None
-model = joblib.load("../models/churn_model.pkl")
-columns = joblib.load("../models/columns.pkl")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model = joblib.load(os.path.join(BASE_DIR, "..", "notebooks", "churn_model.pkl"))
+features = joblib.load(os.path.join(BASE_DIR, "..", "notebooks", "features.pkl"))
 st.title("Customer Churn Prediction")
 
 st.write(
