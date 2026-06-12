@@ -205,7 +205,7 @@ if st.button("Predict Churn"):
     # Risk Level
     if probability < 0.3:
         risk = "🟢 Low Risk"
-    elif probability < 0.7:
+    elif probability < 0.45:
         risk = "🟡 Medium Risk"
     else:
         risk = "🔴 High Risk"
@@ -216,7 +216,7 @@ if st.button("Predict Churn"):
     st.subheader("Prediction Result")
 
     if prediction == 1:
-        st.error("⚠️ High Churn Risk")
+        st.error("⚠️ Customer Likely To Churn")
     else:
         st.success("✅ Customer Likely To Stay")
 
@@ -245,12 +245,14 @@ if st.button("Predict Churn"):
     # Quick Insight
     st.subheader("Quick Insight")
 
-    if prediction == 1:
-        st.write("Customer shows patterns similar to high churn users.")
-        st.write("Possible reasons: Month-to-month contract, high charges, lack of support.")
-    else:
-        st.write("Customer has strong retention indicators like longer tenure or stable contract.")
+if probability >= 0.60:
+    st.write("🔴 High churn risk detected. Immediate retention strategies are recommended.")
 
+elif probability >= 0.30:
+    st.write("🟡 Moderate churn risk detected. Customer engagement may help reduce churn.")
+
+else:
+    st.write("🟢 Customer appears stable with low churn risk.")
     # Model Info
     st.subheader("Model Info")
     st.write("Model used: Logistic Regression (Best Accuracy: 80.31%)")
