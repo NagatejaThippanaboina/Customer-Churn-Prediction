@@ -1,5 +1,11 @@
 # 📊 Customer Churn Prediction System
 
+## 🌐 Live Demo
+🚀 Streamlit App:
+https://customer-churn-prediction-9f7fregswscfyyuumt6nk4.streamlit.app/
+
+---
+
 ## 🧠 Overview
 This project predicts whether a telecom customer is likely to churn based on demographic, account, and service usage data.  
 It provides an interactive web application built using Streamlit for real-time prediction and explainable AI insights.
